@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2E6817D1E68CD0F00E133BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6817C1E68CD0F00E133BF /* AppDelegate.swift */; };
+		A2E6817F1E68CD0F00E133BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6817E1E68CD0F00E133BF /* ViewController.swift */; };
+		A2E681821E68CD0F00E133BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E681801E68CD0F00E133BF /* Main.storyboard */; };
+		A2E681841E68CD0F00E133BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2E681831E68CD0F00E133BF /* Assets.xcassets */; };
+		A2E681871E68CD0F00E133BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2E681851E68CD0F00E133BF /* LaunchScreen.storyboard */; };
+		A2E681971E68CD6A00E133BF /* CleanroomLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E681941E68CD6100E133BF /* CleanroomLogger.framework */; };
+		A2E681981E68CD6A00E133BF /* CleanroomLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A2E681941E68CD6100E133BF /* CleanroomLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2E681931E68CD6100E133BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B9059031DAECB5200B4EEC0;
+			remoteInfo = CleanroomLogger;
+		};
+		A2E681951E68CD6100E133BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B90590C1DAECB5200B4EEC0;
+			remoteInfo = CleanroomLoggerTests;
+		};
+		A2E681991E68CD6A00E133BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B9059021DAECB5200B4EEC0;
+			remoteInfo = CleanroomLogger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A2E6819B1E68CD6A00E133BF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A2E681981E68CD6A00E133BF /* CleanroomLogger.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A2E681791E68CD0F00E133BF /* LogExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E6817C1E68CD0F00E133BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2E6817E1E68CD0F00E133BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A2E681811E68CD0F00E133BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2E681831E68CD0F00E133BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2E681861E68CD0F00E133BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2E681881E68CD0F00E133BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CleanroomLogger.xcodeproj; path = ../CleanroomLogger.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2E681761E68CD0F00E133BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E681971E68CD6A00E133BF /* CleanroomLogger.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2E681701E68CD0F00E133BF = {
+			isa = PBXGroup;
+			children = (
+				A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */,
+				A2E6817B1E68CD0F00E133BF /* LogExample */,
+				A2E6817A1E68CD0F00E133BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2E6817A1E68CD0F00E133BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2E681791E68CD0F00E133BF /* LogExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2E6817B1E68CD0F00E133BF /* LogExample */ = {
+			isa = PBXGroup;
+			children = (
+				A2E6817C1E68CD0F00E133BF /* AppDelegate.swift */,
+				A2E6817E1E68CD0F00E133BF /* ViewController.swift */,
+				A2E681801E68CD0F00E133BF /* Main.storyboard */,
+				A2E681831E68CD0F00E133BF /* Assets.xcassets */,
+				A2E681851E68CD0F00E133BF /* LaunchScreen.storyboard */,
+				A2E681881E68CD0F00E133BF /* Info.plist */,
+			);
+			path = LogExample;
+			sourceTree = "<group>";
+		};
+		A2E6818F1E68CD6100E133BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2E681941E68CD6100E133BF /* CleanroomLogger.framework */,
+				A2E681961E68CD6100E133BF /* CleanroomLoggerUnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2E681781E68CD0F00E133BF /* LogExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2E6818B1E68CD0F00E133BF /* Build configuration list for PBXNativeTarget "LogExample" */;
+			buildPhases = (
+				A2E681751E68CD0F00E133BF /* Sources */,
+				A2E681761E68CD0F00E133BF /* Frameworks */,
+				A2E681771E68CD0F00E133BF /* Resources */,
+				A2E6819B1E68CD6A00E133BF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2E6819A1E68CD6A00E133BF /* PBXTargetDependency */,
+			);
+			name = LogExample;
+			productName = LogExample;
+			productReference = A2E681791E68CD0F00E133BF /* LogExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2E681711E68CD0F00E133BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CF;
+				TargetAttributes = {
+					A2E681781E68CD0F00E133BF = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A2E681741E68CD0F00E133BF /* Build configuration list for PBXProject "LogExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2E681701E68CD0F00E133BF;
+			productRefGroup = A2E6817A1E68CD0F00E133BF /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A2E6818F1E68CD6100E133BF /* Products */;
+					ProjectRef = A2E6818E1E68CD6100E133BF /* CleanroomLogger.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A2E681781E68CD0F00E133BF /* LogExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A2E681941E68CD6100E133BF /* CleanroomLogger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CleanroomLogger.framework;
+			remoteRef = A2E681931E68CD6100E133BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A2E681961E68CD6100E133BF /* CleanroomLoggerUnitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CleanroomLoggerUnitTests.xctest;
+			remoteRef = A2E681951E68CD6100E133BF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2E681771E68CD0F00E133BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E681871E68CD0F00E133BF /* LaunchScreen.storyboard in Resources */,
+				A2E681841E68CD0F00E133BF /* Assets.xcassets in Resources */,
+				A2E681821E68CD0F00E133BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2E681751E68CD0F00E133BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2E6817F1E68CD0F00E133BF /* ViewController.swift in Sources */,
+				A2E6817D1E68CD0F00E133BF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2E6819A1E68CD6A00E133BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CleanroomLogger;
+			targetProxy = A2E681991E68CD6A00E133BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2E681801E68CD0F00E133BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2E681811E68CD0F00E133BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2E681851E68CD0F00E133BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2E681861E68CD0F00E133BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2E681891E68CD0F00E133BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A2E6818A1E68CD0F00E133BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2E6818C1E68CD0F00E133BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LogExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cfilipov.LogExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A2E6818D1E68CD0F00E133BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LogExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.cfilipov.LogExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2E681741E68CD0F00E133BF /* Build configuration list for PBXProject "LogExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E681891E68CD0F00E133BF /* Debug */,
+				A2E6818A1E68CD0F00E133BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2E6818B1E68CD0F00E133BF /* Build configuration list for PBXNativeTarget "LogExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E6818C1E68CD0F00E133BF /* Debug */,
+				A2E6818D1E68CD0F00E133BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2E681711E68CD0F00E133BF /* Project object */;
+}

@@ -1,4 +1,4 @@
-    //
+//
 //  LiveLogInspectorConfiguration.swift
 //  CleanroomLogger
 //
@@ -15,13 +15,6 @@ open class LiveLogInspectorConfiguration: BasicLogConfiguration
 {
     private let bufferingRecorder: BufferedLogEntryMessageRecorder
 
-    open var inspectorViewController: LiveLogInspectorViewController {
-        let inspector = _inspectorViewController ?? LiveLogInspectorViewController(recorder: bufferingRecorder)
-        _inspectorViewController = inspector
-        return inspector
-    }
-    private weak var _inspectorViewController: LiveLogInspectorViewController?
-
     public init(minimumSeverity: LogSeverity = .verbose, filters: [LogFilter] = [], synchronousMode: Bool = false)
     {
         bufferingRecorder = BufferedLogEntryMessageRecorder(formatters: [PayloadLogFormatter()])
@@ -29,10 +22,12 @@ open class LiveLogInspectorConfiguration: BasicLogConfiguration
         super.init(minimumSeverity: minimumSeverity, filters: filters, recorders: [bufferingRecorder], synchronousMode: synchronousMode)
     }
 
-    open func createInspectorView()
-        -> LiveLogInspectorView
-    {
-        return LiveLogInspectorView(recorder: bufferingRecorder)
+    public func inspectorViewController() -> LiveLogInspectorViewController {
+        return LiveLogInspectorViewController(recorder: bufferingRecorder)
+    }
+    
+    public func inspectorViewDataSource() -> LiveLogInspectorDataSource {
+        return LiveLogInspectorDataSource(recorder: bufferingRecorder)
     }
 }
 
