@@ -386,6 +386,7 @@
 				A2E6818D1E68CD0F00E133BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

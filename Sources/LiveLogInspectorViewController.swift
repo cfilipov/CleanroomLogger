@@ -51,6 +51,20 @@
                 action: #selector(LiveLogInspectorViewController.onDoneButtonPressed))
         }()
         
+        private var pauseButton: UIBarButtonItem = {
+            return UIBarButtonItem(
+                barButtonSystemItem: .pause,
+                target: self,
+                action: #selector(LiveLogInspectorViewController.onPauseButtonPressed))
+        }()
+        
+        private var playButton: UIBarButtonItem = {
+            return UIBarButtonItem(
+                barButtonSystemItem: .play,
+                target: self,
+                action: #selector(LiveLogInspectorViewController.onPlayButtonPressed))
+        }()
+        
         func onDoneButtonPressed() {
             dismiss(animated: true, completion: nil)
         }
@@ -64,6 +78,21 @@
                 orderButton.image = Noun756735.image()
                 dataSource.order = .asc
             }
+        }
+        
+        func onPauseButtonPressed() {
+            dataSource.paused = true
+            setupToolbar()
+        }
+        
+        func onPlayButtonPressed() {
+            dataSource.paused = false
+            setupToolbar()
+        }
+        
+        private func setupToolbar() {
+            let pausePlayButton = dataSource.paused ? playButton : pauseButton
+            viewControllers[0].setToolbarItems([severityButton, flexibleSpace, pausePlayButton, flexibleSpace, orderButton], animated: false)
         }
         
         func onSeverityButtonPressed() {
@@ -123,12 +152,11 @@
             isToolbarHidden = false
             toolbar.isOpaque = true
             toolbar.isTranslucent = false
-            let vc = UITableViewController(style: .grouped)
+            let vc = UITableViewController(style: .plain)
             pushViewController(vc, animated: false)
-            vc.setToolbarItems([severityButton, flexibleSpace, orderButton], animated: false)
+            setupToolbar()
             vc.navigationItem.rightBarButtonItem = doneButton
             vc.title = "Console"
-            vc.tableView.contentInset = UIEdgeInsets(top: -36, left: 0, bottom: -38, right: 0)
             dataSource.tableView = vc.tableView
         }
         

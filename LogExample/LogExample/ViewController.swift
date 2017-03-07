@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         /*
          Demonstrate using an existing custom tableView to present the live log using the data source directly.
          */
-        dataSource.tableView = tableView
+        //dataSource.tableView = tableView
     }
 
     /*

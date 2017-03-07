@@ -31,12 +31,6 @@ open class BufferedLogRecorder<BufferItem>: LogRecorderBase
      buffer. */
     open let bufferLimit: Int
 
-    /** If `true`, the items in the buffer are stored in reverse chronological
-     order: the first item in the buffer array will be the newest, while the
-     last item will be the oldest. Otherwise, the array will be ordered from
-     oldest to newest. */
-    open let reverseChronological: Bool
-
     /** The function used to create a `BufferItem` given a `LogEntry` and a
      formatted message string. */
     open let createBufferItem: (LogEntry, String) -> BufferItem
@@ -77,11 +71,6 @@ open class BufferedLogRecorder<BufferItem>: LogRecorderBase
      consumption will grow endlessly unless you manually clear the buffer
      periodically.
 
-     - parameter reverseChronological: If `true`, the items in the buffer will
-     be stored in reverse chronological order: the first item in the buffer
-     array will be the newest, while the last item will be the oldest. 
-     Otherwise, the array will be ordered from oldest to newest.
-
      - parameter queue: The `DispatchQueue` to use for the recorder. If `nil`,
      a new queue will be created.
 
@@ -93,7 +82,6 @@ open class BufferedLogRecorder<BufferItem>: LogRecorderBase
     {
         self.buffer = []
         self.bufferLimit = bufferLimit
-        self.reverseChronological = reverseChronological
         self.createBufferItem = createBufferItem
 
         self.didRecordItemCallbacks = CallbackRegistry<(_ recorder: BufferedLogRecorder<BufferItem>, _ item: BufferItem, _ didTruncateBuffer: Bool) -> Void>()
@@ -137,25 +125,17 @@ open class BufferedLogRecorder<BufferItem>: LogRecorderBase
      */
     open override func record(message: String, for entry: LogEntry, currentQueue: DispatchQueue, synchronousMode: Bool)
     {
-        let item = createBufferItem(entry, message)
-
+        let item = self.createBufferItem(entry, message)
+        
         var didTruncate = false
-        if bufferLimit > 0 && buffer.count + 1 > bufferLimit {
-            if reverseChronological {
-                buffer.removeLast()
-            } else {
-                buffer.removeFirst()
-            }
+        if self.bufferLimit > 0 && self.buffer.count + 1 > self.bufferLimit {
+            self.buffer.removeFirst()
             didTruncate = true
         }
-
-        if reverseChronological {
-            buffer.insert(item, at: 0)
-        } else {
-            buffer.append(item)
-        }
-
-        for callback in didRecordItemCallbacks.callbacks() {
+        
+        self.buffer.append(item)
+        
+        for callback in self.didRecordItemCallbacks.callbacks() {
             callback(self, item, didTruncate)
         }
     }
