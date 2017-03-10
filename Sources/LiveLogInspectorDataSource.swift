@@ -138,7 +138,7 @@
         
         public var order: SortOrder = .asc {
             didSet {
-                self.scroll(to: .auto)
+                reload(forceScroll: true)
             }
         }
         
