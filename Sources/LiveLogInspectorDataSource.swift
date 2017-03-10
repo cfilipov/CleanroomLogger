@@ -74,6 +74,13 @@
         private var clearBufferCallbackHandle: CallbackHandle?
         private var topIndexPath = IndexPath(row: 0, section: 0)
         
+        fileprivate let dateFormatter: DateFormatter = {
+            let f = DateFormatter()
+            f.dateStyle = .none
+            f.setLocalizedDateFormatFromTemplate("jmsSSS")
+            return f
+        }()
+        
         private var bottomIndexPath: IndexPath {
             return IndexPath(row: max(count - 1, 0), section: 0)
         }
@@ -217,6 +224,17 @@
                 width: width,
                 font: LogEntryCell.defaultFont)
             return height + (LogEntryCell.padding * 2)
+        }
+        
+        public func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+            var actions = [UITableViewRowAction]()
+            let item = self[indexPath.row]
+            let timestamp = dateFormatter.string(from: item.entry.timestamp)
+            let action = UITableViewRowAction(style: .normal, title: timestamp) { (action, indexPath) -> Void in
+                tableView.setEditing(false, animated: true)
+            }
+            actions.append(action)
+            return actions
         }
         
     }
